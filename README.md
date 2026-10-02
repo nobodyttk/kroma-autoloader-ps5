@@ -1,6 +1,16 @@
 # Kroma Autoloader PLD (PS5)
 
-A standalone PS5 homebrew ELF shortcut launcher that automatically runs the **Relapse** WebKit + Kernel exploit by **soniciso1** and immediately auto-loads **PS5 Payload Manager (pldmgr v0.5.2)** on port `9021`.
+A standalone PS5 homebrew ELF shortcut launcher that automatically runs the **Relapse** WebKit + Kernel exploit chain by **soniciso1** and immediately auto-loads the **PS5 Payload Manager (pldmgr v0.5.2)** on port `9021`.
+
+---
+
+## Why I Built This
+
+I came up with this idea because, unfortunately, the `webkit-autoloader` isn't fully stable for me yet (huge shoutout and stay strong, itsPLK!). Other solutions I tested that attempted to bundle and load multiple payloads at once (kstuff, etaHEN, etc.) were frequently triggering kernel panics / crashing my console.
+
+As a provisional workaround—and fueled by a healthy dose of pure laziness—I created this shortcut to automate the entire process through soniciso1's method, which solely focuses on a clean, reliable jailbreak. From there, I chose to auto-load only what was essential for my workflow: the **PS5 Payload Manager (pldmgr)**. 
+
+Of course, feel free to fork or modify the code to customize whichever payload you want to auto-load after the exploit completes!
 
 ---
 
@@ -11,7 +21,7 @@ A standalone PS5 homebrew ELF shortcut launcher that automatically runs the **Re
 - **Full Automation:**
   1. Opens the customized [Relapse exploit](https://nobodyttk.github.io/relapse/relapse.html).
   2. Runs the WebKit + Kernel jailbreak chain automatically.
-  3. Once `elfldr` is active on port `9021`, it immediately auto-loads `pldmgr_v0.5.2.elf` without any manual controller input.
+  3. Once `elfldr` is active on port `9021`, it immediately auto-loads `pldmgr_v0.5.2.elf` without requiring any controller input.
 - **Custom Title ID:** Uses `KROM00002` so it does not overwrite or conflict with any existing browser apps or other homebrew shortcuts.
 
 ---
