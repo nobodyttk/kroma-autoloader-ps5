@@ -8,7 +8,7 @@ A standalone PS5 homebrew ELF shortcut launcher that automatically runs the **Re
 
 I came up with this idea because, unfortunately, the `webkit-autoloader` isn't fully stable for me yet (huge shoutout and stay strong, itsPLK!). Other solutions I tested that attempted to bundle and load multiple payloads at once (kstuff, etaHEN, etc.) were frequently triggering kernel panics / crashing my console.
 
-As a provisional workaround—and fueled by a healthy dose of pure laziness—I created this shortcut to automate the entire process through soniciso1's method, which solely focuses on a clean, reliable jailbreak. From there, I chose to auto-load only what was essential for my workflow: the **PS5 Payload Manager (pldmgr)**. 
+As a provisional workaround and fueled by a healthy dose of pure laziness I created this shortcut to automate the entire process through soniciso1's method, which solely focuses on a clean, reliable jailbreak. From there, I chose to auto-load only what was essential for my workflow: the **PS5 Payload Manager (pldmgr)**. 
 
 Of course, feel free to fork or modify the code to customize whichever payload you want to auto-load after the exploit completes!
 
