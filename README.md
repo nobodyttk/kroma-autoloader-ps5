@@ -10,7 +10,20 @@ I came up with this idea because, unfortunately, the `webkit-autoloader` isn't f
 
 As a provisional workaround and fueled by a healthy dose of pure laziness I created this shortcut to automate the entire process through soniciso1's method, which solely focuses on a clean, reliable jailbreak. From there, I chose to auto-load only what was essential for my workflow: the **PS5 Payload Manager (pldmgr)**. 
 
-Of course, feel free to fork or modify the code to customize whichever payload you want to auto-load after the exploit completes!
+### Want to Auto-Load a Different Payload?
+
+Because the official upstream host (`soniciso1.github.io`) cannot be modified remotely, customizing which payload auto-loads requires hosting your own modified copy of Relapse:
+
+1. **Fork or Clone Relapse:** Head over to [soniciso1/relapse](https://github.com/soniciso1/relapse) and create your own fork.
+2. **Edit `relapse.html`:** Near the bottom of `relapse.html` (inside `run().then(...)`), specify the payload file you want to automatically trigger upon a successful jailbreak (e.g., `etaHEN.elf`, `kstuff-lite_v1.11.elf`, etc.):
+   ```javascript
+   if (window.__elfldrUp && typeof window.__sendPayload === "function") {
+       showPayloadMenu();
+       await window.__sendPayload("YOUR_CHOSEN_PAYLOAD.elf");
+   }
+   ```
+3. **Deploy to GitHub Pages:** In your repository settings, enable **GitHub Pages** (Settings > Pages > Source: `main` branch).
+4. **Build Your Custom ELF:** Update `DEEPLINK_URL` in `build_kroma.py` with your new GitHub Pages URL and run the script to generate your custom installer!
 
 ---
 
